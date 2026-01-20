@@ -28,6 +28,9 @@ body {
   background: radial-gradient(1000px 700px at 20% 10%, rgba(124, 58, 237, 0.25), transparent 55%),
     radial-gradient(900px 600px at 80% 15%, rgba(34, 211, 238, 0.2), transparent 55%),
     var(--bg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   line-height: 1.55;
 }
 
@@ -35,6 +38,8 @@ body {
   position: fixed;
   inset: 0;
   background: radial-gradient(1200px 700px at 50% 0%, rgba(255, 255, 255, 0.06), transparent 55%);
+  background-size: cover;
+  background-repeat: no-repeat;
   pointer-events: none;
   z-index: -1;
 }
@@ -408,20 +413,26 @@ body {
 
 @media (max-width: 720px) {
   .hero {
-    grid-template-columns: 1fr;
-    justify-items: center;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
   }
 
   .avatar-wrap {
     width: 124px;
     height: 124px;
+    margin-bottom: 16px;
+  }
+
+  .hero-text {
+    text-align: center;
   }
 
   .subtitle {
-    margin: 0 0 16px;
+    margin: 8px 0 16px;
     width: 100%;
     display: block;
+    text-align: center;
   }
 
   .cta-row {
@@ -441,5 +452,16 @@ body {
     width: 32px;
     height: 32px;
     font-size: 16px;
+  }
+
+  /* Mobile background optimizations */
+  body {
+    background: radial-gradient(600px 400px at 20% 10%, rgba(124, 58, 237, 0.25), transparent 55%),
+      radial-gradient(500px 350px at 80% 15%, rgba(34, 211, 238, 0.2), transparent 55%),
+      var(--bg);
+  }
+
+  .bg {
+    background: radial-gradient(700px 400px at 50% 0%, rgba(255, 255, 255, 0.06), transparent 55%);
   }
 }
