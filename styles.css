@@ -457,13 +457,11 @@ body {
   /* Mobile background optimizations */
   body {
     background-attachment: scroll;
-    background: radial-gradient(600px 400px at 20% 10%, rgba(124, 58, 237, 0.25), transparent 55%),
-      radial-gradient(500px 350px at 80% 15%, rgba(34, 211, 238, 0.2), transparent 55%),
-      var(--bg);
+    background: var(--bg);
     min-height: 100vh;
   }
 
   .bg {
-    background: radial-gradient(700px 400px at 50% 0%, rgba(255, 255, 255, 0.06), transparent 55%);
+    background: none;
   }
 }
